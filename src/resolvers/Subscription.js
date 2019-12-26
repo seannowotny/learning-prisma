@@ -4,6 +4,12 @@ const newLink = {
   resolve: payload => payload
 };
 
+const newVote = {
+  subscribe: (parent, args, context, info) => context.prisma.$subscribe.vote({ mutation_in: ['CREATED'] }).node(),
+  resolve: payload => payload
+};
+
 module.exports = {
-  newLink
+  newLink,
+  newVote
 };
