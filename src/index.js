@@ -1,3 +1,4 @@
+const Subscription = require('./resolvers/Subscription');
 const { prisma } = require('./generated/prisma-client');
 const { GraphQLServer } = require('graphql-yoga');
 
@@ -9,6 +10,7 @@ const Link = require('./resolvers/Link');
 const resolvers = {
   Query,
   Mutation,
+  Subscription,
   User,
   Link
 }
